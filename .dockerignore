@@ -1,0 +1,46 @@
+# Logs
+*.log
+app.log
+
+# Temporary files
+tmp*.txt
+*.tmp
+
+# Git
+.git
+.gitignore
+
+# Node modules (frontend will be built separately)
+frontend/node_modules
+frontend/.env
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation (not needed in container)
+*.md
+!requirements.txt
+
+# Audio files (will be generated at runtime)
+static/audio/*.mp3
+static/audio/*.wav 

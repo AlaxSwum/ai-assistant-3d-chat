@@ -42,4 +42,4 @@ static/audio/*
 # Temporary files
 tmp*/
 *.tmp
-*.txt 
+tmp*.txt 
