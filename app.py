@@ -24,13 +24,16 @@ logging.basicConfig(
 app = Flask(__name__)
 CORS(app)
 
-# Get environment variables for Ollama configuration
-OLLAMA_API_URL = os.environ.get("OLLAMA_API_URL", "http://localhost:11434/api/chat")
-OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.1:8b")
+# OpenRouter API configuration
+OPENROUTER_API_KEY = "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"
+OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
-# Debug: Log Ollama configuration
-logging.info(f"Ollama API URL: {OLLAMA_API_URL}")
-logging.info(f"Ollama Model: {OLLAMA_MODEL}")
+# Debug: Log API configuration
+logging.info(f"OpenRouter API URL: {OPENROUTER_API_URL}")
+if OPENROUTER_API_KEY and OPENROUTER_API_KEY != "sk-or-v1-your-api-key-here":
+    logging.info(f"OpenRouter API key configured (length: {len(OPENROUTER_API_KEY)})")
+else:
+    logging.error("OpenRouter API key not configured or using placeholder")
 
 # Ensure static directory exists
 os.makedirs('static/audio', exist_ok=True)
