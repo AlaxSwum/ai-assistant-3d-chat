@@ -190,3 +190,127 @@
 2025-05-27 16:07:47,447 - root - INFO - Generated audio file: answer_ab9c9247.mp3
 2025-05-27 16:07:47,449 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 16:07:47] "POST /api/chat HTTP/1.1" 200 -
 2025-05-27 16:07:47,457 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 16:07:47] "[35m[1mGET /static/audio/answer_ab9c9247.mp3 HTTP/1.1[0m" 206 -
+2025-05-27 16:09:12,621 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:09:13,147 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 16:09:13,403 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 16:09:13,410 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 16:09:13,416 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 16:36:29,449 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:36:30,070 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 16:36:30,334 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 16:36:30,341 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 16:36:30,347 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 16:51:39,035 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:51:39,108 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:51:40,039 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 16:51:40,292 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 16:51:40,300 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 16:51:40,308 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 16:51:58,189 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:51:58,257 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:51:58,459 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 16:51:58,600 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 16:51:58,603 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 16:51:58,608 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 16:55:19,691 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:55:19,736 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:55:20,618 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 16:55:20,882 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 16:55:20,888 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 16:55:20,894 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 16:55:53,796 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:55:53,846 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:55:54,076 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 16:55:54,288 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 16:55:54,294 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 16:55:54,300 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 17:01:37,281 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 17:01:38,017 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 17:01:38,338 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 17:01:38,351 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 17:01:38,363 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 17:31:22,011 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:31:22] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 17:31:22,015 - root - INFO - Processing chat request: format=standard
+2025-05-27 17:31:22,016 - root - INFO - Sending request to OpenRouter API
+2025-05-27 17:31:22,505 - root - ERROR - OpenRouter API error: {"error":{"message":"No auth credentials found","code":401}}
+2025-05-27 17:31:22,509 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:31:22] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-05-27 17:31:51,895 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:31:51] "OPTIONS /api/speech-to-text HTTP/1.1" 200 -
+2025-05-27 17:31:59,158 - root - INFO - Transcribed audio: Thanks for watching!
+2025-05-27 17:31:59,159 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:31:59] "POST /api/speech-to-text HTTP/1.1" 200 -
+2025-05-27 17:31:59,165 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:31:59] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 17:31:59,166 - root - INFO - Processing chat request: format=standard
+2025-05-27 17:31:59,167 - root - INFO - Sending request to OpenRouter API
+2025-05-27 17:31:59,430 - root - ERROR - OpenRouter API error: {"error":{"message":"No auth credentials found","code":401}}
+2025-05-27 17:31:59,434 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:31:59] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-05-27 17:32:31,676 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 17:32:31,748 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 17:32:32,305 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 17:32:32,528 - root - INFO - OpenRouter API key loaded: sk-or-v1-7...
+2025-05-27 17:32:32,530 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 17:32:32,537 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 17:32:32,542 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 17:32:48,962 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 17:32:49,026 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 17:32:49,674 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 17:32:49,803 - root - INFO - OpenRouter API key loaded: sk-or-v1-7...
+2025-05-27 17:32:49,806 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 17:32:49,809 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 17:32:49,813 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 17:33:07,528 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 17:33:07,613 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 17:33:07,931 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 17:33:08,052 - root - INFO - OpenRouter API key loaded: sk-or-v1-7...
+2025-05-27 17:33:08,054 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 17:33:08,058 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 17:33:08,062 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 17:34:02,617 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:34:02] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 17:34:02,621 - root - INFO - Processing chat request: format=standard
+2025-05-27 17:34:02,621 - root - INFO - Sending request to OpenRouter API
+2025-05-27 17:34:02,621 - root - INFO - API Key present: True
+2025-05-27 17:34:02,622 - root - INFO - API Key starts with: sk-or-v1-7...
+2025-05-27 17:34:02,622 - root - INFO - Request URL: https://openrouter.ai/api/v1/chat/completions
+2025-05-27 17:34:02,622 - root - INFO - Model: meta-llama/llama-3.1-8b-instruct:free
+2025-05-27 17:34:03,038 - root - ERROR - OpenRouter API error: {"error":{"message":"No auth credentials found","code":401}}
+2025-05-27 17:34:03,046 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:34:03] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-05-27 17:48:40,571 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:48:40] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 17:48:40,574 - root - INFO - Processing chat request: format=standard
+2025-05-27 17:48:40,574 - root - INFO - Sending request to OpenRouter API
+2025-05-27 17:48:40,574 - root - INFO - API Key present: True
+2025-05-27 17:48:40,574 - root - INFO - API Key starts with: sk-or-v1-7...
+2025-05-27 17:48:40,574 - root - INFO - Request URL: https://openrouter.ai/api/v1/chat/completions
+2025-05-27 17:48:40,575 - root - INFO - Model: meta-llama/llama-3.1-8b-instruct:free
+2025-05-27 17:48:41,010 - root - ERROR - OpenRouter API error: {"error":{"message":"No auth credentials found","code":401}}
+2025-05-27 17:48:41,016 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:48:41] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-05-27 17:48:53,581 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:48:53] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 17:48:53,583 - root - INFO - Processing chat request: format=standard
+2025-05-27 17:48:53,583 - root - INFO - Sending request to OpenRouter API
+2025-05-27 17:48:53,583 - root - INFO - API Key present: True
+2025-05-27 17:48:53,583 - root - INFO - API Key starts with: sk-or-v1-7...
+2025-05-27 17:48:53,584 - root - INFO - Request URL: https://openrouter.ai/api/v1/chat/completions
+2025-05-27 17:48:53,584 - root - INFO - Model: meta-llama/llama-3.1-8b-instruct:free
+2025-05-27 17:48:53,899 - root - ERROR - OpenRouter API error: {"error":{"message":"No auth credentials found","code":401}}
+2025-05-27 17:48:53,904 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:48:53] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-05-27 17:57:04,034 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 17:57:04,101 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 17:57:04,301 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 17:57:04,492 - root - INFO - OpenRouter API key loaded: sk-or-v1-7...
+2025-05-27 17:57:04,495 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 17:57:04,501 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 17:57:04,507 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 17:58:52,435 - root - INFO - Processing chat request: format=simple
+2025-05-27 17:58:52,435 - root - INFO - Sending request to OpenRouter API
+2025-05-27 17:58:52,435 - root - INFO - API Key present: True
+2025-05-27 17:58:52,435 - root - INFO - API Key starts with: sk-or-v1-7...
+2025-05-27 17:58:52,435 - root - INFO - Request URL: https://openrouter.ai/api/v1/chat/completions
+2025-05-27 17:58:52,435 - root - INFO - Model: meta-llama/llama-3.1-8b-instruct:free
+2025-05-27 17:58:53,349 - root - ERROR - OpenRouter API error: {"error":{"message":"No auth credentials found","code":401}}
+2025-05-27 17:58:53,351 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 17:58:53] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-05-27 18:16:18,449 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 18:16:18] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 18:16:18,452 - root - INFO - Processing chat request: format=standard
+2025-05-27 18:16:18,452 - root - INFO - Sending request to OpenRouter API
+2025-05-27 18:16:18,452 - root - INFO - API Key present: True
+2025-05-27 18:16:18,452 - root - INFO - API Key starts with: sk-or-v1-7...
+2025-05-27 18:16:18,452 - root - INFO - Request URL: https://openrouter.ai/api/v1/chat/completions
+2025-05-27 18:16:18,452 - root - INFO - Model: meta-llama/llama-3.1-8b-instruct:free
+2025-05-27 18:16:18,904 - root - ERROR - OpenRouter API error: {"error":{"message":"No auth credentials found","code":401}}
+2025-05-27 18:16:18,909 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 18:16:18] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -

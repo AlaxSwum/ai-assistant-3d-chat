@@ -132,7 +132,9 @@ IMPORTANT FORMATTING INSTRUCTIONS:
                 "messages": [
                     {"role": "system", "content": system_message},
                     {"role": "user", "content": user_message}
-                ]
+                ],
+                "max_tokens": 500,  # Limit tokens to stay within free tier limits
+                "temperature": 0.7
             }
             
             # Debug: Log request details (without sensitive data)
@@ -414,4 +416,4 @@ if __name__ == '__main__':
     else:
         # Development mode
         logging.info(f"Starting server in DEVELOPMENT mode on port {port}")
-        app.run(debug=True, host='0.0.0.0', port=port) 
+        app.run(debug=True, host='0.0.0.0', port=port)
