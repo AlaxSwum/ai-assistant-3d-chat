@@ -9,7 +9,7 @@ COPY frontend/ .
 
 # Set environment variables for React build
 ENV PUBLIC_URL=/
-ENV REACT_APP_API_URL=/api
+ENV REACT_APP_API_URL=
 
 RUN npm run build
 
