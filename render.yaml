@@ -5,7 +5,7 @@ services:
     runtime: docker
     envVars:
       - key: OPENROUTER_API_KEY
-        value: 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
+        value: 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
       - key: PYTHONUNBUFFERED
         value: 1
     disk:
