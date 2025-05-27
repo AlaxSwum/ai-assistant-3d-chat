@@ -24,9 +24,15 @@ logging.basicConfig(
 app = Flask(__name__)
 CORS(app)
 
-# Get environment variables for Ollama configuration
+# Get environment variables for OpenRouter configuration
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "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")
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
+
+# Debug: Log API key presence (not the actual key)
+if OPENROUTER_API_KEY:
+    logging.info(f"OpenRouter API key loaded: {OPENROUTER_API_KEY[:10]}...")
+else:
+    logging.error("OpenRouter API key not found!")
 
 # Ensure static directory exists
 os.makedirs('static/audio', exist_ok=True)
@@ -128,8 +134,12 @@ IMPORTANT FORMATTING INSTRUCTIONS:
                 ]
             }
             
-            # Send request to OpenRouter
+            # Debug: Log request details (without sensitive data)
             logging.info("Sending request to OpenRouter API")
+            logging.info(f"API Key present: {bool(OPENROUTER_API_KEY)}")
+            logging.info(f"API Key starts with: {OPENROUTER_API_KEY[:10] if OPENROUTER_API_KEY else 'None'}...")
+            logging.info(f"Request URL: {OPENROUTER_API_URL}")
+            logging.info(f"Model: {data['model']}")
             response = requests.post(
                 OPENROUTER_API_URL,
                 headers=headers,
@@ -289,7 +299,21 @@ def speech_to_text():
 # Add a simple test endpoint
 @app.route('/api/test', methods=['GET'])
 def test():
-    return jsonify({"status": "ok", "message": "API is working"})
+    return jsonify({
+        "status": "ok", 
+        "message": "API is working",
+        "api_key_present": bool(OPENROUTER_API_KEY),
+        "api_key_prefix": OPENROUTER_API_KEY[:10] if OPENROUTER_API_KEY else "None"
+    })
+
+# Debug endpoint to check environment
+@app.route('/api/debug', methods=['GET'])
+def debug():
+    return jsonify({
+        "openrouter_key_set": "OPENROUTER_API_KEY" in os.environ,
+        "openrouter_key_length": len(OPENROUTER_API_KEY) if OPENROUTER_API_KEY else 0,
+        "python_unbuffered": os.environ.get("PYTHONUNBUFFERED", "not_set")
+    })
 
 # Serve React frontend static files (JS, CSS, etc.)
 @app.route('/static/js/<filename>')
