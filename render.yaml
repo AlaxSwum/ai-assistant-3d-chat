@@ -2,9 +2,7 @@ services:
   # Backend Web Service
   - type: web
     name: ai-teacher-backend
-    runtime: python3
-    buildCommand: pip install -r requirements.txt
-    startCommand: python app.py --prod --port $PORT
+    runtime: docker
     envVars:
       - key: OPENROUTER_API_KEY
         value: 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
