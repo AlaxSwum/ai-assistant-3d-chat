@@ -56,7 +56,8 @@ ENV FLASK_ENV=production
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:8000/api/test || exit 1
+  CMD curl -f http://localhost:${PORT:-8000}/api/test || exit 1
 
 # Command to run the application
-CMD ["python", "app.py", "--port", "8000", "--prod"] 
+# Use PORT environment variable provided by Render, fallback to 8000
+CMD ["sh", "-c", "python app.py --port ${PORT:-8000} --prod"]

@@ -402,7 +402,7 @@ def catch_all(path):
 if __name__ == '__main__':
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Run the AI Teacher Flask app')
-    parser.add_argument('--port', type=int, default=8000, help='Port to run the server on')
+    parser.add_argument('--port', type=int, default=int(os.environ.get('PORT', 8000)), help='Port to run the server on')
     parser.add_argument('--prod', action='store_true', help='Run in production mode')
     args = parser.parse_args()
     
