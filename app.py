@@ -25,7 +25,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Get environment variables for OpenRouter configuration
-OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "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")
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 # Debug: Log API key presence (not the actual key)
@@ -48,6 +48,14 @@ def after_request(response):
 @app.route('/api/chat', methods=['POST'])
 def chat():
     try:
+        # Check if API key is available
+        if not OPENROUTER_API_KEY:
+            logging.error("OpenRouter API key not configured")
+            return jsonify({
+                "error": "API key not configured",
+                "message": "The OpenRouter API key is not set. Please configure OPENROUTER_API_KEY environment variable."
+            }), 500
+        
         # Get the user message and profile data from request
         user_message = request.json.get('message', '')
         response_format = request.json.get('responseFormat', 'standard')
