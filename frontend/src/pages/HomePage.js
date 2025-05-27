@@ -67,7 +67,7 @@ const HomePage = () => {
             <TextArea
               value={userBio}
               onChange={(e) => setUserBio(e.target.value)}
-              placeholder="Tell us about your medical background or health interests"
+              placeholder="Tell us about your background or interests"
               rows={4}
             />
           </FormGroup>
@@ -133,12 +133,12 @@ const HomePage = () => {
               <UserInitial>{userName ? userName[0].toUpperCase() : 'A'}</UserInitial>
             </ProfileCircle>
             <ProfileInfo>
-              <h3>{userName || 'Medical AI Assistant'}</h3>
+              <h3>{userName || 'Personal AI Assistant'}</h3>
               <span>🟢 Online</span>
             </ProfileInfo>
           </Header>
 
-          <GreetingText>How may I assist with your medical questions today?</GreetingText>
+          <GreetingText>How may I assist you today?</GreetingText>
 
           <OptionsContainer>
             <OptionCard as={Link} to="/chat">
@@ -149,7 +149,7 @@ const HomePage = () => {
                   <path d="M8 14H13.5" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
                 </svg>
               </OptionIcon>
-              <OptionText>Chat with Medical Assistant</OptionText>
+              <OptionText>Chat with Personal Assistant</OptionText>
               <ArrowIcon>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9 6L15 12L9 18" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -165,7 +165,7 @@ const HomePage = () => {
                   <path d="M12 20V22" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </OptionIcon>
-              <OptionText>Talk with Medical Assistant</OptionText>
+              <OptionText>Talk with Personal Assistant</OptionText>
               <ArrowIcon>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9 6L15 12L9 18" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

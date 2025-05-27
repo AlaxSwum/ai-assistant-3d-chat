@@ -166,7 +166,7 @@ const VoicePage = () => {
         <BackButton as={Link} to="/">
           ←
         </BackButton>
-        <HeaderTitle>Your Medical AI Assistant</HeaderTitle>
+        <HeaderTitle>Your Personal AI Assistant</HeaderTitle>
         <OnlineStatus>Online</OnlineStatus>
       </Header>
       
