@@ -24,15 +24,13 @@ logging.basicConfig(
 app = Flask(__name__)
 CORS(app)
 
-# Get environment variables for OpenRouter configuration
-OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
-OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
+# Get environment variables for Ollama configuration
+OLLAMA_API_URL = os.environ.get("OLLAMA_API_URL", "http://localhost:11434/api/chat")
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.1:8b")
 
-# Debug: Log API key presence (not the actual key)
-if OPENROUTER_API_KEY:
-    logging.info(f"OpenRouter API key loaded: {OPENROUTER_API_KEY[:10]}...")
-else:
-    logging.error("OpenRouter API key not found!")
+# Debug: Log Ollama configuration
+logging.info(f"Ollama API URL: {OLLAMA_API_URL}")
+logging.info(f"Ollama Model: {OLLAMA_MODEL}")
 
 # Ensure static directory exists
 os.makedirs('static/audio', exist_ok=True)
@@ -48,13 +46,9 @@ def after_request(response):
 @app.route('/api/chat', methods=['POST'])
 def chat():
     try:
-        # Check if API key is available
+        # Check if API key is configured
         if not OPENROUTER_API_KEY:
-            logging.error("OpenRouter API key not configured")
-            return jsonify({
-                "error": "API key not configured",
-                "message": "The OpenRouter API key is not set. Please configure OPENROUTER_API_KEY environment variable."
-            }), 500
+            return jsonify({"error": "OpenRouter API key not configured"}), 500
         
         # Get the user message and profile data from request
         user_message = request.json.get('message', '')
@@ -130,32 +124,26 @@ IMPORTANT FORMATTING INSTRUCTIONS:
             # Prepare the OpenRouter request
             headers = {
                 "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-                "Content-Type": "application/json",
-                "HTTP-Referer": os.environ.get("FRONTEND_URL", "http://localhost:3000"),
-                "X-Title": "AI Teacher Assistant"
+                "Content-Type": "application/json"
             }
             
             data = {
-                "model": "meta-llama/llama-3.1-8b-instruct:free",  # Using free Llama model
+                "model": "meta-llama/llama-3.1-8b-instruct:free",
                 "messages": [
                     {"role": "system", "content": system_message},
                     {"role": "user", "content": user_message}
-                ],
-                "max_tokens": 500,  # Limit tokens to stay within free tier limits
-                "temperature": 0.7
+                ]
             }
             
-            # Debug: Log request details (without sensitive data)
+            # Debug: Log request details
             logging.info("Sending request to OpenRouter API")
-            logging.info(f"API Key present: {bool(OPENROUTER_API_KEY)}")
-            logging.info(f"API Key starts with: {OPENROUTER_API_KEY[:10] if OPENROUTER_API_KEY else 'None'}...")
             logging.info(f"Request URL: {OPENROUTER_API_URL}")
             logging.info(f"Model: {data['model']}")
             response = requests.post(
                 OPENROUTER_API_URL,
                 headers=headers,
                 json=data,
-                timeout=60
+                timeout=30
             )
             
             # Check if request was successful
@@ -185,13 +173,13 @@ IMPORTANT FORMATTING INSTRUCTIONS:
             logging.error("Failed to connect to OpenRouter service")
             return jsonify({
                 "error": "Failed to connect to OpenRouter API",
-                "message": "Connection to AI service failed. Please try again."
+                "message": "Connection to OpenRouter service failed. Please check your internet connection."
             }), 500
         except Exception as e:
             logging.error(f"Error communicating with OpenRouter: {str(e)}")
             return jsonify({
                 "error": f"Error communicating with OpenRouter: {str(e)}",
-                "message": "There was a problem with the AI service."
+                "message": "There was a problem with the OpenRouter service."
             }), 500
             
     except Exception as e:
