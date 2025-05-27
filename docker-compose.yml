@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-teacher-backend
+    restart: unless-stopped
+    volumes:
+      - ./static:/app/static
+      - ./app.log:/app/app.log
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - OPENROUTER_API_KEY=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
+  
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ai-teacher-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./ssl:/etc/nginx/ssl
+    depends_on:
+      - backend
+
+volumes:
+  ollama-data: 

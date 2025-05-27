@@ -1,0 +1,192 @@
+2025-05-27 15:17:08,657 - root - INFO - Using Ollama model: Swum/ollma
+2025-05-27 15:17:08,658 - root - INFO - Using Ollama API URL: https://ollama.ai/api
+2025-05-27 15:17:08,659 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:17:08,672 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.182:8000
+2025-05-27 15:17:08,672 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-27 15:17:08,684 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:17:08,825 - root - INFO - Using Ollama model: Swum/ollma
+2025-05-27 15:17:08,825 - root - INFO - Using Ollama API URL: https://ollama.ai/api
+2025-05-27 15:17:08,827 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:17:08,830 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:17:08,837 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:17:13,165 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:17:13,426 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:17:13,913 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:17:14,054 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:17:14,057 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:17:14,062 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:17:24,926 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:17:24] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 15:17:24,928 - root - INFO - Processing chat request: format=standard
+2025-05-27 15:17:24,928 - root - INFO - Sending request to OpenRouter API
+2025-05-27 15:17:25,576 - root - ERROR - OpenRouter API error: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 533. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account","code":402,"metadata":{"provider_name":null}},"user_id":"user_2sMI4ikPPNkRm0EYdAjSut3wePx"}
+2025-05-27 15:17:25,579 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:17:25] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-05-27 15:19:16,565 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:19:16] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 15:19:16,569 - root - INFO - Processing chat request: format=standard
+2025-05-27 15:19:16,569 - root - INFO - Sending request to OpenRouter API
+2025-05-27 15:19:17,186 - root - ERROR - OpenRouter API error: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 533. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account","code":402,"metadata":{"provider_name":null}},"user_id":"user_2sMI4ikPPNkRm0EYdAjSut3wePx"}
+2025-05-27 15:19:17,191 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:19:17] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-05-27 15:20:51,429 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:24:09,828 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:24:09,837 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.182:8000
+2025-05-27 15:24:09,837 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-27 15:24:09,844 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:24:09,980 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:24:09,983 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:24:09,992 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:24:21,807 - root - INFO - Processing chat request: format=standard
+2025-05-27 15:24:21,807 - root - INFO - Sending request to OpenRouter API
+2025-05-27 15:24:43,332 - root - INFO - Generated audio file: answer_ee11f150.mp3
+2025-05-27 15:24:43,335 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:24:43] "POST /api/chat HTTP/1.1" 200 -
+2025-05-27 15:25:24,828 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:25:24] "GET /api/test HTTP/1.1" 200 -
+2025-05-27 15:26:02,885 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:26:02] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 15:26:02,887 - root - INFO - Processing chat request: format=standard
+2025-05-27 15:26:02,887 - root - INFO - Sending request to OpenRouter API
+2025-05-27 15:26:41,396 - root - INFO - Generated audio file: answer_cc2143f4.mp3
+2025-05-27 15:26:41,399 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:26:41] "POST /api/chat HTTP/1.1" 200 -
+2025-05-27 15:26:41,595 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:26:41] "[35m[1mGET /static/audio/answer_cc2143f4.mp3 HTTP/1.1[0m" 206 -
+2025-05-27 15:27:02,865 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:27:02] "POST /api/speech-to-text HTTP/1.1" 200 -
+2025-05-27 15:27:02,867 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:27:02] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 15:27:02,868 - root - INFO - Processing chat request: format=standard
+2025-05-27 15:27:02,868 - root - INFO - Sending request to OpenRouter API
+2025-05-27 15:27:18,747 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:27:18] "POST /api/speech-to-text HTTP/1.1" 200 -
+2025-05-27 15:27:18,752 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:27:18] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 15:27:18,754 - root - INFO - Processing chat request: format=standard
+2025-05-27 15:27:18,754 - root - INFO - Sending request to OpenRouter API
+2025-05-27 15:27:24,938 - root - INFO - Generated audio file: answer_9ef8ee33.mp3
+2025-05-27 15:27:24,939 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:27:24] "POST /api/chat HTTP/1.1" 200 -
+2025-05-27 15:28:41,732 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:28:42,286 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:28:42,518 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:28:42,525 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:28:42,535 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:28:55,613 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:28:55] "POST /api/speech-to-text HTTP/1.1" 200 -
+2025-05-27 15:28:58,284 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:28:58] "POST /api/speech-to-text HTTP/1.1" 200 -
+2025-05-27 15:29:06,454 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:29:06] "POST /api/speech-to-text HTTP/1.1" 200 -
+2025-05-27 15:29:06,463 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:29:06] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 15:29:06,464 - root - INFO - Processing chat request: format=standard
+2025-05-27 15:29:06,464 - root - INFO - Sending request to OpenRouter API
+2025-05-27 15:29:11,107 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:29:11,720 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:29:11,923 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:29:11,929 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:29:11,934 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:29:16,927 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:29:16] "POST /api/speech-to-text HTTP/1.1" 200 -
+2025-05-27 15:29:16,930 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:29:16] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 15:29:16,931 - root - INFO - Processing chat request: format=standard
+2025-05-27 15:29:16,931 - root - INFO - Sending request to OpenRouter API
+2025-05-27 15:29:23,766 - root - INFO - Generated audio file: answer_d71af2de.mp3
+2025-05-27 15:29:23,769 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:29:23] "POST /api/chat HTTP/1.1" 200 -
+2025-05-27 15:29:26,186 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:29:26] "POST /api/speech-to-text HTTP/1.1" 200 -
+2025-05-27 15:29:26,188 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:29:26] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 15:29:26,189 - root - INFO - Processing chat request: format=standard
+2025-05-27 15:29:26,189 - root - INFO - Sending request to OpenRouter API
+2025-05-27 15:29:53,009 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:29:53] "POST /api/speech-to-text HTTP/1.1" 200 -
+2025-05-27 15:29:53,014 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:29:53] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 15:29:53,015 - root - INFO - Processing chat request: format=standard
+2025-05-27 15:29:53,015 - root - INFO - Sending request to OpenRouter API
+2025-05-27 15:30:25,138 - root - INFO - Generated audio file: answer_c4822bf3.mp3
+2025-05-27 15:30:25,139 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:30:25] "POST /api/chat HTTP/1.1" 200 -
+2025-05-27 15:30:25,157 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:30:25] "[35m[1mGET /static/audio/answer_c4822bf3.mp3 HTTP/1.1[0m" 206 -
+2025-05-27 15:30:48,462 - root - INFO - Generated audio file: answer_4f656ee9.mp3
+2025-05-27 15:30:48,465 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:30:48] "POST /api/chat HTTP/1.1" 200 -
+2025-05-27 15:30:55,560 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:30:55] "POST /api/speech-to-text HTTP/1.1" 200 -
+2025-05-27 15:30:55,563 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:30:55] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 15:30:55,564 - root - INFO - Processing chat request: format=standard
+2025-05-27 15:30:55,564 - root - INFO - Sending request to OpenRouter API
+2025-05-27 15:31:31,197 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:31:31,246 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:31:31,634 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:31:31,819 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:31:31,824 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:31:31,828 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:33:49,431 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:33:49,500 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:33:49,686 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:33:49,692 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:33:49,697 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:34:10,779 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:34:10,828 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:34:11,018 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:34:11,025 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:34:11,030 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:34:33,998 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:34:34,043 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:34:34,186 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:34:34,370 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:34:34,375 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:34:34,380 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:34:58,816 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:34:58,859 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:34:59,542 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:34:59,666 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:34:59,669 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:34:59,673 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:49:30,758 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:49:31,337 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:49:31,542 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:49:31,548 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:49:31,553 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:53:43,592 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:53:43,631 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:53:43,913 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:53:44,112 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:53:44,118 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:53:44,126 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:54:05,753 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:54:06,281 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:54:06,494 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:54:06,499 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:54:06,504 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:56:00,878 - root - ERROR - Whisper subprocess error: Command '['whisper', '/var/folders/lw/y85kvgwn1_l1q632gd7rv7bm0000gn/T/tmpjji8ghv1.wav', '--model', 'base', '--output_format', 'txt', '--language', 'auto', '--best_of', '5', '--beam_size', '5']' returned non-zero exit status 2.
+2025-05-27 15:56:00,879 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:56:00] "[35m[1mPOST /api/speech-to-text HTTP/1.1[0m" 500 -
+2025-05-27 15:56:09,366 - root - ERROR - Whisper subprocess error: Command '['whisper', '/var/folders/lw/y85kvgwn1_l1q632gd7rv7bm0000gn/T/tmpq5ezbg68.wav', '--model', 'base', '--output_format', 'txt', '--language', 'auto', '--best_of', '5', '--beam_size', '5']' returned non-zero exit status 2.
+2025-05-27 15:56:09,367 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:56:09] "[35m[1mPOST /api/speech-to-text HTTP/1.1[0m" 500 -
+2025-05-27 15:56:15,381 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:56:15] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 15:56:15,384 - root - INFO - Processing chat request: format=standard
+2025-05-27 15:56:15,384 - root - INFO - Sending request to OpenRouter API
+2025-05-27 15:56:25,592 - root - INFO - Generated audio file: answer_d8b027f9.mp3
+2025-05-27 15:56:25,593 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:56:25] "POST /api/chat HTTP/1.1" 200 -
+2025-05-27 15:56:25,776 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:56:25] "[35m[1mGET /static/audio/answer_d8b027f9.mp3 HTTP/1.1[0m" 206 -
+2025-05-27 15:56:34,900 - root - ERROR - Whisper subprocess error: Command '['whisper', '/var/folders/lw/y85kvgwn1_l1q632gd7rv7bm0000gn/T/tmpr8z8fbm_.wav', '--model', 'base', '--output_format', 'txt', '--language', 'auto', '--best_of', '5', '--beam_size', '5']' returned non-zero exit status 2.
+2025-05-27 15:56:34,901 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 15:56:34] "[35m[1mPOST /api/speech-to-text HTTP/1.1[0m" 500 -
+2025-05-27 15:58:07,980 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:58:08,022 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:58:08,749 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:58:08,980 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:58:08,987 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:58:08,992 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 15:58:34,492 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 15:58:35,177 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 15:58:35,336 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 15:58:35,340 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 15:58:35,346 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 16:05:13,498 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:05:13,528 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:05:13,541 - werkzeug - INFO -  * Detected change in '/Users/swumpyaesone/Downloads/ai-assistant-3d-chat-1fcdd304e74587dda47c5b81424d37b17e00a48d/app.py', reloading
+2025-05-27 16:05:14,511 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-27 16:05:14,764 - root - INFO - Starting server in DEVELOPMENT mode on port 8000
+2025-05-27 16:05:14,772 - werkzeug - WARNING -  * Debugger is active!
+2025-05-27 16:05:14,777 - werkzeug - INFO -  * Debugger PIN: 364-232-809
+2025-05-27 16:05:49,466 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 16:05:49] "[31m[1mPOST /api/test HTTP/1.1[0m" 405 -
+2025-05-27 16:05:57,195 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 16:05:57] "GET /api/test HTTP/1.1" 200 -
+2025-05-27 16:06:50,549 - root - INFO - Processing chat request: format=standard
+2025-05-27 16:06:50,549 - root - INFO - Sending request to OpenRouter API
+2025-05-27 16:06:54,865 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 16:06:54] "[33mGET / HTTP/1.1[0m" 404 -
+2025-05-27 16:06:55,705 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 16:06:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-27 16:06:55,905 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 16:06:55] "[33mGET / HTTP/1.1[0m" 404 -
+2025-05-27 16:06:56,521 - root - INFO - Generated audio file: answer_e25c4f7f.mp3
+2025-05-27 16:06:56,523 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 16:06:56] "POST /api/chat HTTP/1.1" 200 -
+2025-05-27 16:07:39,038 - root - INFO - Transcribed audio: You still love me?
+2025-05-27 16:07:39,038 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 16:07:39] "POST /api/speech-to-text HTTP/1.1" 200 -
+2025-05-27 16:07:39,047 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 16:07:39] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-05-27 16:07:39,048 - root - INFO - Processing chat request: format=standard
+2025-05-27 16:07:39,048 - root - INFO - Sending request to OpenRouter API
+2025-05-27 16:07:47,447 - root - INFO - Generated audio file: answer_ab9c9247.mp3
+2025-05-27 16:07:47,449 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 16:07:47] "POST /api/chat HTTP/1.1" 200 -
+2025-05-27 16:07:47,457 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 16:07:47] "[35m[1mGET /static/audio/answer_ab9c9247.mp3 HTTP/1.1[0m" 206 -
