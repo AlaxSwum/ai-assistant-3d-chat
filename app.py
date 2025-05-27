@@ -122,6 +122,7 @@ IMPORTANT FORMATTING INSTRUCTIONS:
             # Prepare the OpenRouter request
             headers = {
                 "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+                "Content-Type": "application/json",
                 "HTTP-Referer": os.environ.get("FRONTEND_URL", "http://localhost:3000"),
                 "X-Title": "AI Teacher Assistant"
             }
