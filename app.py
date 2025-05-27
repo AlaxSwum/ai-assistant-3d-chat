@@ -25,7 +25,7 @@ app = Flask(__name__)
 CORS(app)
 
 # OpenRouter API configuration
-OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY', 'PLEASE_SET_YOUR_OPENROUTER_API_KEY')
+OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY', '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')
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 # Debug: Log API configuration
@@ -193,11 +193,20 @@ IMPORTANT FORMATTING INSTRUCTIONS:
         logging.error(f"Server error: {str(e)}")
         return jsonify({"error": str(e), "message": "Server error occurred"}), 500
 
+import hashlib
+import time
+
+# TTS rate limiting and caching
+last_tts_request = 0
+TTS_RATE_LIMIT = 2  # seconds between requests
+audio_cache = {}  # Simple in-memory cache
+
 def generate_audio(text):
-    """Generate audio file from text using gTTS with enhanced quality."""
+    """Generate audio from text using multiple TTS services with rate limiting and caching"""
+    global last_tts_request
+    
     try:
-        # Clean text more thoroughly for TTS
-        # Remove all markdown formatting
+        # Clean the text for better TTS
         cleaned_text = re.sub(r'##+\s+', '', text)  # Remove headers
         cleaned_text = re.sub(r'\*\*?(.*?)\*\*?', r'\1', cleaned_text)  # Remove bold/italic
         cleaned_text = re.sub(r'`.*?`', '', cleaned_text)  # Remove code
@@ -215,32 +224,98 @@ def generate_audio(text):
             sentences = cleaned_text.split('. ')
             cleaned_text = '. '.join(sentences[:3]) + '.'
         
+        # Check cache first
+        text_hash = hashlib.md5(cleaned_text.encode()).hexdigest()[:8]
+        if text_hash in audio_cache:
+            logging.info(f"Using cached audio for text hash: {text_hash}")
+            return audio_cache[text_hash]
+        
+        # Rate limiting
+        current_time = time.time()
+        time_since_last = current_time - last_tts_request
+        if time_since_last < TTS_RATE_LIMIT:
+            sleep_time = TTS_RATE_LIMIT - time_since_last
+            logging.info(f"Rate limiting: sleeping for {sleep_time:.2f} seconds")
+            time.sleep(sleep_time)
+        
         # Generate a unique filename
-        filename = f"answer_{uuid.uuid4().hex[:8]}.mp3"
+        filename = f"answer_{text_hash}.mp3"
         filepath = os.path.join("static/audio", filename)
         
-        # Try multiple TTS options for better quality
-        try:
-            # First try: Australian English (clearer pronunciation)
-            tts = gTTS(text=cleaned_text, lang='en', tld='com.au', slow=False)
-            tts.save(filepath)
-        except Exception as e1:
-            try:
-                # Fallback: US English
-                tts = gTTS(text=cleaned_text, lang='en', tld='com', slow=False)
-                tts.save(filepath)
-            except Exception as e2:
-                try:
-                    # Final fallback: UK English
-                    tts = gTTS(text=cleaned_text, lang='en', tld='co.uk', slow=False)
-                    tts.save(filepath)
-                except Exception as e3:
-                    logging.error(f"All TTS options failed: {e1}, {e2}, {e3}")
-                    return None
+        # Skip if file already exists
+        if os.path.exists(filepath):
+            audio_url = f"/static/audio/{filename}"
+            audio_cache[text_hash] = audio_url
+            logging.info(f"Audio file already exists: {filename}")
+            return audio_url
         
+        # Try multiple TTS services with longer delays between attempts
+        tts_success = False
+        
+        # Method 1: Try gTTS with longer delays
+        for attempt, (tld, name) in enumerate([('com.au', 'Australian'), ('com', 'US'), ('co.uk', 'UK')]):
+            try:
+                if attempt > 0:
+                    delay = 5 * attempt  # Increasing delay: 5s, 10s
+                    logging.info(f"Waiting {delay}s before trying {name} TTS...")
+                    time.sleep(delay)
+                
+                logging.info(f"Trying {name} gTTS...")
+                tts = gTTS(text=cleaned_text, lang='en', tld=tld, slow=False)
+                tts.save(filepath)
+                tts_success = True
+                logging.info(f"Successfully generated audio with {name} gTTS")
+                break
+            except Exception as e:
+                logging.warning(f"{name} gTTS failed: {str(e)}")
+                continue
+        
+        # Method 2: Fallback to pyttsx3 (offline TTS) if gTTS fails
+        if not tts_success:
+            try:
+                logging.info("Trying offline pyttsx3 TTS...")
+                import pyttsx3
+                engine = pyttsx3.init()
+                engine.setProperty('rate', 150)  # Speed
+                engine.setProperty('volume', 0.9)  # Volume
+                
+                # Convert to WAV first, then to MP3 if possible
+                wav_filepath = filepath.replace('.mp3', '.wav')
+                engine.save_to_file(cleaned_text, wav_filepath)
+                engine.runAndWait()
+                
+                # Try to convert WAV to MP3 using ffmpeg if available
+                try:
+                    import subprocess
+                    subprocess.run(['ffmpeg', '-i', wav_filepath, '-codec:a', 'mp3', filepath], 
+                                 check=True, capture_output=True)
+                    os.remove(wav_filepath)  # Remove WAV file
+                    tts_success = True
+                    logging.info("Successfully generated audio with pyttsx3 + ffmpeg")
+                except (subprocess.CalledProcessError, FileNotFoundError):
+                    # If ffmpeg not available, use WAV file directly
+                    os.rename(wav_filepath, filepath.replace('.mp3', '.wav'))
+                    filename = filename.replace('.mp3', '.wav')
+                    filepath = filepath.replace('.mp3', '.wav')
+                    tts_success = True
+                    logging.info("Successfully generated audio with pyttsx3 (WAV format)")
+            except ImportError:
+                logging.warning("pyttsx3 not available")
+            except Exception as e:
+                logging.warning(f"pyttsx3 TTS failed: {str(e)}")
+        
+        # Method 3: Create a simple text-to-speech placeholder
+        if not tts_success:
+            logging.info("All TTS methods failed, creating placeholder response")
+            # Return None to indicate no audio available
+            return None
+        
+        last_tts_request = time.time()
+        audio_url = f"/static/audio/{filename}"
+        audio_cache[text_hash] = audio_url
         logging.info(f"Generated audio file: {filename}")
-        # Return the relative URL to the audio file
-        return f"/static/audio/{filename}"
+        return audio_url
+        
     except Exception as e:
         logging.error(f"Error generating audio: {str(e)}")
         return None
