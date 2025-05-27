@@ -6,6 +6,11 @@ COPY frontend/package*.json ./
 RUN npm ci --only=production
 
 COPY frontend/ .
+
+# Set environment variables for React build
+ENV PUBLIC_URL=/
+ENV REACT_APP_API_URL=/api
+
 RUN npm run build
 
 # Backend stage  

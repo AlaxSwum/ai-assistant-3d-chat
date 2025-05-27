@@ -291,20 +291,64 @@ def speech_to_text():
 def test():
     return jsonify({"status": "ok", "message": "API is working"})
 
-# Serve static files
+# Serve React frontend static files (JS, CSS, etc.)
+@app.route('/static/js/<filename>')
+def serve_js(filename):
+    logging.info(f"Serving JS file: {filename}")
+    try:
+        return send_from_directory('frontend/build/static/js', filename)
+    except Exception as e:
+        logging.error(f"JS file not found: {filename}, error: {str(e)}")
+        return "File not found", 404
+
+@app.route('/static/css/<filename>')
+def serve_css(filename):
+    logging.info(f"Serving CSS file: {filename}")
+    try:
+        return send_from_directory('frontend/build/static/css', filename)
+    except Exception as e:
+        logging.error(f"CSS file not found: {filename}, error: {str(e)}")
+        return "File not found", 404
+
+@app.route('/static/media/<filename>')
+def serve_media(filename):
+    logging.info(f"Serving media file: {filename}")
+    try:
+        return send_from_directory('frontend/build/static/media', filename)
+    except Exception as e:
+        logging.error(f"Media file not found: {filename}, error: {str(e)}")
+        return "File not found", 404
+
+# Serve audio files
 @app.route('/static/audio/<filename>')
 def serve_audio(filename):
     return send_from_directory('static/audio', filename)
 
-# Serve React frontend static files
-@app.route('/static/<path:filename>')
-def serve_static(filename):
-    return send_from_directory('frontend/build/static', filename)
+# Serve favicon and other root files
+@app.route('/favicon.ico')
+def serve_favicon():
+    return send_from_directory('frontend/build', 'favicon.ico')
+
+@app.route('/manifest.json')
+def serve_manifest():
+    return send_from_directory('frontend/build', 'manifest.json')
 
 # Serve React frontend
 @app.route('/')
 def serve_frontend():
-    return send_from_directory('frontend/build', 'index.html')
+    try:
+        logging.info("Serving frontend index.html")
+        return send_from_directory('frontend/build', 'index.html')
+    except Exception as e:
+        logging.error(f"Error serving frontend: {str(e)}")
+        # Check if the file exists
+        import os
+        index_path = os.path.join('frontend/build', 'index.html')
+        if os.path.exists(index_path):
+            logging.error(f"index.html exists at {index_path}")
+        else:
+            logging.error(f"index.html NOT found at {index_path}")
+        return jsonify({"error": "Frontend not available", "message": "Please check if frontend is built"}), 500
 
 # Catch all other routes and serve React frontend (for React Router)
 @app.route('/<path:path>')
@@ -312,8 +356,21 @@ def catch_all(path):
     # If it's an API route, return 404
     if path.startswith('api/'):
         return jsonify({"error": "API endpoint not found"}), 404
+    
+    # Check if it's a static file request and serve it
+    if path.startswith('static/'):
+        try:
+            return send_from_directory('frontend/build', path)
+        except Exception as e:
+            logging.error(f"Static file not found: {path}")
+            return "File not found", 404
+    
     # Otherwise serve the React app
-    return send_from_directory('frontend/build', 'index.html')
+    try:
+        return send_from_directory('frontend/build', 'index.html')
+    except Exception as e:
+        logging.error(f"Error serving frontend for path {path}: {str(e)}")
+        return jsonify({"error": "Frontend not available"}), 500
 
 if __name__ == '__main__':
     # Parse command line arguments
