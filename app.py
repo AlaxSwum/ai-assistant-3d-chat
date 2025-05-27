@@ -25,7 +25,7 @@ app = Flask(__name__)
 CORS(app)
 
 # OpenRouter API configuration
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY', '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')
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 # Debug: Log API configuration
