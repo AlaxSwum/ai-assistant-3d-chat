@@ -296,6 +296,25 @@ def test():
 def serve_audio(filename):
     return send_from_directory('static/audio', filename)
 
+# Serve React frontend static files
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return send_from_directory('frontend/build/static', filename)
+
+# Serve React frontend
+@app.route('/')
+def serve_frontend():
+    return send_from_directory('frontend/build', 'index.html')
+
+# Catch all other routes and serve React frontend (for React Router)
+@app.route('/<path:path>')
+def catch_all(path):
+    # If it's an API route, return 404
+    if path.startswith('api/'):
+        return jsonify({"error": "API endpoint not found"}), 404
+    # Otherwise serve the React app
+    return send_from_directory('frontend/build', 'index.html')
+
 if __name__ == '__main__':
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Run the AI Teacher Flask app')

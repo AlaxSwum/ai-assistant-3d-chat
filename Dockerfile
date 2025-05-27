@@ -1,3 +1,14 @@
+# Frontend build stage
+FROM node:16-alpine AS frontend-build
+
+WORKDIR /app/frontend
+COPY frontend/package*.json ./
+RUN npm ci --only=production
+
+COPY frontend/ .
+RUN npm run build
+
+# Backend stage  
 FROM python:3.9-slim
 
 WORKDIR /app
@@ -17,8 +28,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Install whisper models to avoid download delays in production
 RUN python -c "import whisper; whisper.load_model('base')"
 
-# Copy application code
-COPY . .
+# Copy backend application code
+COPY app.py .
+COPY static/ ./static/
+
+# Copy frontend build from previous stage
+COPY --from=frontend-build /app/frontend/build ./frontend/build
 
 # Create directory for audio files with proper permissions
 RUN mkdir -p static/audio && chmod 755 static/audio

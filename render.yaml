@@ -1,5 +1,5 @@
 services:
-  # Backend Web Service
+  # Backend Web Service (serves both API and frontend)
   - type: web
     name: ai-teacher-backend
     runtime: docker
@@ -13,15 +13,4 @@ services:
       mountPath: /app/static/audio
       sizeGB: 1
 
-  # Frontend Static Site
-  - type: static
-    name: ai-teacher-frontend
-    buildCommand: cd frontend && npm ci && npm run build
-    staticPublishPath: ./frontend/build
-    pullRequestPreviewsEnabled: false
-    envVars:
-      - key: REACT_APP_API_URL
-        fromService:
-          type: web
-          name: ai-teacher-backend
-          envVarKey: RENDER_EXTERNAL_URL 
+ 
