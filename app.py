@@ -144,6 +144,8 @@ IMPORTANT FORMATTING INSTRUCTIONS:
             logging.info("Sending request to OpenRouter API")
             logging.info(f"Request URL: {OPENROUTER_API_URL}")
             logging.info(f"Model: {data['model']}")
+            logging.info(f"Authorization header: Bearer {OPENROUTER_API_KEY[:20]}...")
+            logging.info(f"Full headers: {headers}")
             response = requests.post(
                 OPENROUTER_API_URL,
                 headers=headers,
